@@ -16,4 +16,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "react_practice/resources/ts")
+    }
+  },
 };

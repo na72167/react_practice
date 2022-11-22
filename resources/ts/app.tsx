@@ -1,12 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
+import Users from "./pages/Users"
+import Login from "./pages/Login"
+import Register from "./pages/Register"
 
-const App = () => {
-    const title: string = 'TypeScript React !!'
-    return (
-        <h1>{title}</h1>
-    )
+function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Route path={'/'} component={Users}></Route>
+        <Route path={'/login'} component={Login}></Route>
+        <Route path={'/register'} component={Register}></Route>
+      </BrowserRouter>
+    </div>
+  );
 }
+export default App;
 
 ReactDOM.render(
     <App />,
